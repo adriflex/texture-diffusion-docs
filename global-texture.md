@@ -112,6 +112,19 @@ Quand tu sélectionnes une vue dans la collection **Breakdown**, le panel expose
 
 Quand le masque automatique ne suffit pas (typiquement : faire dominer une vue précise sur une zone), le bouton **Paint custom mask** te bascule en mode peinture sur un masque vide associé à la vue. Tu peins en blanc les zones où tu veux que cette vue domine.
 
+### Combler les trous avec des vertex colors
+
+> 🖼️ **[FIGURE — un objet de la Final Assembly en mode Vertex Paint avec une couleur de fond peinte sous les projections]**
+
+Quand les projections n'arrivent pas à couvrir certaines zones (angles morts, géométrie occluse, recoins), la texture finale s'y retrouve vide. Le shader de l'assembly pose les **vertex colors sous toutes les projections** — tu peux donc t'en servir comme fond pour boucher visuellement ces trous, et ça passe inaperçu en général.
+
+Sur l'objet de la collection **Final Assembly**, deux approches :
+
+- **Couleur uniforme** — sélectionne tout (`A`) en Vertex Paint et applique une teinte proche de l'asset (`Paint → Set Vertex Colors`).
+- **Peinture approximative** — peins grossièrement les zones manquantes avec des teintes proches de ce qui les entoure. Pas besoin de précision, c'est juste un fond sous les projections.
+
+> 💡 À ne faire que si tu vois des trous après l'assembly. Si tout est couvert, tu sautes cette étape.
+
 ### Tweak — déformer pour aligner
 
 > 🎞️ **[GIF — bouton Edit Tweak : déformation des UVs projetées pour recaler l'image sur le mesh]**
