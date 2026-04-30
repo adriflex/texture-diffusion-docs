@@ -49,6 +49,14 @@ Cette étape calcule deux choses pour chaque vue :
 
 > 💡 Le type est réglé dans les **préférences de l'addon** (par défaut : Occlusion). Active **Toggle Mask Preview** pour visualiser le masque sur l'objet avant de continuer.
 
+### Résolution des masques
+
+> 🖼️ **[FIGURE — préférence "Mask bake resolution" dans les Add-on Preferences avec ses options 256 / 512 / 1024 / 2048]**
+
+La résolution des masques se règle aussi dans les **préférences de l'addon**, séparément de la résolution de la texture finale. Le défaut **512 px** convient à la majorité des cas et garde le bake rapide.
+
+> ⚠️ **Sur les objets lourds (typiquement les modèles générés par IA, ou tout mesh dense en polygones), pense à monter à 1024 ou 2048.** Sinon, des petits points blancs (artefacts dus au sampling trop grossier des masques) apparaissent sur le rendu final. C'est l'un des pièges les plus communs sur les meshes denses.
+
 ### Symétrie X
 
 > 🖼️ **[FIGURE — comparaison objet symétrique avec et sans Mirror activé]**
